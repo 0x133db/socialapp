@@ -12,7 +12,7 @@ const Signup = async() => {
       <form className="space-y-4">
         {/* Username Input */}
         <div>
-          <label htmlFor="username" className="block text-sm font-medium text-gray-600">
+          <label htmlFor="username" className="block text-sm font-medium text-gray-700">
             Username
           </label>
           <input
