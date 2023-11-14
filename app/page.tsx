@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link';
 import { stringify } from 'querystring';
 import { useState } from 'react';
+import { signIn } from 'next-auth/react';
 
 export default function  Home() {
   const [username, setUsername] = useState('');
@@ -43,6 +44,10 @@ export default function  Home() {
       setIsLoading(false);
     }
   };
+
+  const handleProviderLogin = async (provider: string)=> {
+    signIn(provider, {redirect: true, callbackUrl: 'http://localhost:3000/home'})
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -96,11 +101,14 @@ export default function  Home() {
         
         {/* Additional Links */}
         <div className="mt-4">
-          <p className="text-sm text-gray-600">
-            <Link href="/home">
-              Home
-            </Link>
-          </p>
+        <button
+            type="submit"
+            className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none"
+            disabled={isLoading}
+            onClick={()=>handleProviderLogin('facebook')}
+          >
+            {isLoading ? 'Logging In...' : 'Log In with Facebook'}
+          </button>
         </div>
         <div className="mt-4">
           <p className="text-sm text-gray-600">
