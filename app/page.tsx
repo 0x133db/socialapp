@@ -97,6 +97,13 @@ export default function  Home() {
         {/* Additional Links */}
         <div className="mt-4">
           <p className="text-sm text-gray-600">
+            <Link href="/home">
+              Home
+            </Link>
+          </p>
+        </div>
+        <div className="mt-4">
+          <p className="text-sm text-gray-600">
             Don't have an account?{' '}
             <Link href="/signup">
               Sign up here
@@ -116,3 +123,4 @@ export default function  Home() {
 };
 
 
+/*delete*/
