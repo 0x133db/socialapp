@@ -7,3 +7,34 @@
         @apply hidden xl:inline-flex p-2 h-10 w-10 bg-gray-200 rounded-full text-gray-700 cursor-pointer hover:bg-gray-300;
     }
 }
+
+
+/* Loading Animation */
+@keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    background-color: #4076D4;
+    border-radius: 50%;
+    animation: fadeInOut 1.5s infinite;
+  }
+  
+  .fade1 {
+    animation-delay: 0.5s;
+  }
+  
+  .fade2 {
+    animation-delay: 1s;
+  }
+  
+  .fade3 {
+    animation-delay: 1.5s;
+  }
