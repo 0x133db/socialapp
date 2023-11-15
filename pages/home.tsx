@@ -5,7 +5,8 @@ import "@/app/globals.css";
 import Header from '@/components/Header';
 
 
-export default function Example() {
+
+export default function Home() {
   //const [users, setUsers] = useState<User[]>([]);
 
   /*useEffect(() => {
@@ -16,6 +17,6 @@ export default function Example() {
   }, []);*/
 
   return (
-    <Header/>
+      <Header />
   );
 }

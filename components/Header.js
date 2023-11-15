@@ -1,6 +1,7 @@
 import React from 'react'
 import "@/app/globals.css";
 import Image from 'next/image'
+import { useSession } from "next-auth/react"
 import HeaderIcon from './HeaderIcon'
 import {
     BellIcon,

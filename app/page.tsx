@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { stringify } from 'querystring';
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
+import { getServerSession } from 'next-auth';
 
 export default function  Home() {
   const [username, setUsername] = useState('');
@@ -50,7 +51,7 @@ export default function  Home() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="max-w-md w-full p-6 bg-white rounded-md shadow-md">
         <h2 className="text-2xl font-semibold mb-4">Collaborative Social Editing Network</h2>
         
@@ -127,8 +128,6 @@ export default function  Home() {
         )}
       </div>
     </div>
+    
   );
 };
-
-
-/*delete*/
