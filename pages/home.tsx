@@ -3,11 +3,14 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import "@/app/globals.css";
 import Header from '@/components/Header';
+import Sidebar from '@/components/Sidebar';
+import Feed from '@/components/Feed';
 import LoadingAnimation from '@/components/LoadingAnimation'
 
 //ServerSide
 import { useSession, getSession } from "next-auth/react"
 import { redirect } from 'next/navigation';
+import Head from 'next/head';
 
 
 
@@ -32,6 +35,15 @@ export default function Home() {
   }
 
   return (
+    <div className='h-screen bg-gray-100 overflow-hidden'>
+      <Head>
+        <title>Facebook</title>
+      </Head>
       <Header />
+      <main className='flex'>
+        <Sidebar />
+        <Feed/>
+      </main>
+    </div>
   );
 }
