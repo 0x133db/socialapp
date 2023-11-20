@@ -11,6 +11,7 @@ import LoadingAnimation from '@/components/LoadingAnimation'
 import { useSession, getSession } from "next-auth/react"
 import { redirect } from 'next/navigation';
 import Head from 'next/head';
+import Widgets from '../components/Widgets'
 
 
 
@@ -43,6 +44,7 @@ export default function Home() {
       <main className='flex'>
         <Sidebar />
         <Feed/>
+        <Widgets/>
       </main>
     </div>
   );

@@ -8,6 +8,11 @@ const stories =[
         profile: "https://links.papareact.com/l4v",
     },
     {
+        name: "Bill Gates",
+        src: "https://links.papareact.com/4u4",
+        profile: "https://links.papareact.com/zvy",
+    },
+    {
         name: "Elon Musk",
         src: "https://links.papareact.com/4zn",
         profile: "https://links.papareact.com/kxk",

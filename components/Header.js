@@ -24,22 +24,19 @@ import {
 
 const Header = () => {
     const { data: session, status } = useSession();
-    console.log('#################################################### \n data:')
-    console.log(session)
-    console.log('####################################################')
-
-
+    const fblogoOn = true;
 
     return (
         <div className='sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md'>
             {/*Left*/}
             <div className='flex items-center'>
-                {/*<Image src="https://links.papareact.com/5me" width={40} height={40} layout="fixed" />*/}
-                <div className=' h-10 w-10 relative mr-2 rounded-full justify-center items-center bg-blue-400 bg-opacity-0'>
+                {fblogoOn ? (<Image src="https://links.papareact.com/5me" width={40} height={40} layout="fixed" />) :
+                    (                <div className=' h-10 w-10 relative mr-2 rounded-full justify-center items-center bg-blue-400 bg-opacity-0'>
                     <Link href="/home">
                         <Image src= {JointIcon} className=' cursor-pointer absolute right-1 bottom-1' width={34} height={34} layout="fixed" />
                     </Link>
-                </div>
+                </div>)
+                }
                 <div className='flex ml-2 items-center rounded-full bg-gray-100 p-2'>
                     <SearchIcon className='h-6 text-gray-600' />
                     <input className=' hidden sm:inline-flex ml-2 items-center bg-transparent outline-none placeholder-gray-500 flex-shrink' type='text' placeholder='Search' />

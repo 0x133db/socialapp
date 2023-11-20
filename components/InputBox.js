@@ -56,7 +56,6 @@ function InputBox() {
                 }
             }
         )
-        alert("Posted Successfully!")
 
         console.log(inputRef.current.value);
 
